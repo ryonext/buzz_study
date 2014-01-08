@@ -1,0 +1,17 @@
+h1 Listing studies
+
+table
+  tr
+    th Tweet
+    th Uri
+    th
+    th
+    th
+
+  - @studies.each do |s|
+    tr
+      td = link_to s["_id"], s["_id"]
+      td = s["count"]
+
+br
+
