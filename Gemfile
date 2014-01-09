@@ -21,6 +21,7 @@ gem 'mongoid', '~>3.0.0'
 
 # Padrino Stable Gem
 gem 'padrino', '0.11.4'
+gem 'padrino-sprockets', require: "padrino/sprockets"
 
 # Or Padrino Edge
 # gem 'padrino', :github => 'padrino/padrino-framework'

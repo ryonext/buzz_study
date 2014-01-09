@@ -3,6 +3,10 @@ module BuzzStudy
     register Padrino::Rendering
     register Padrino::Mailer
     register Padrino::Helpers
+    register Padrino::Sprockets
+    sprockets url: 'assets',
+              root: Padrino.root('app'),
+              paths: %w[assets/components]
 
     enable :sessions
 
