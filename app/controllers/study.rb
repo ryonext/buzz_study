@@ -1,7 +1,7 @@
 BuzzStudy::App.controllers :study do
   
   get '/' do
-    @studies = Study.collection.aggregate({"$group" => {"_id" => "$uri", "count" => {"$sum" => 1}}}, {"$sort" => {"count" => -1} })
+    @studies = Study.grouped_collection
     render 'index'
   end
 

@@ -12,4 +12,24 @@ class Study
 
   # You can create a composite key in mongoid to replace the default id using the key macro:
   # key :field <, :another_field, :one_more ....>
+  
+  class << self
+    def grouped_collection
+      Study.collection.aggregate(
+        {
+          "$group" => {
+            "_id" => "$uri",
+            "count" => {
+              "$sum" => 1
+            }
+          }
+        }, 
+        {
+          "$sort" => {
+            "count" => -1
+          }
+        }
+      )
+    end
+  end
 end
