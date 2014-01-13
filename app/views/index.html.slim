@@ -4,16 +4,13 @@ h1 Listing studies
 
 table.table
   tr
-    th Tweet
-    th Uri
-    th
-    th
-    th
+    th uri
+    th count
 
   - @studies.each do |s|
     tr
-      td = link_to s["_id"], s["_id"]
-      td = s["count"]
+      td = link_to "#{s.page_name}(#{s.uri})", s.uri
+      td = s.count
 
 br
 

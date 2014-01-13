@@ -15,7 +15,7 @@ class Study
   
   class << self
     def grouped_collection
-      Study.collection.aggregate(
+      result = Study.collection.aggregate(
         {
           "$group" => {
             "_id" => "$uri",
@@ -30,6 +30,12 @@ class Study
           }
         }
       )
+      10.times.map do |i|
+        RankedItem.new(
+          result[i]["_id"], #uri
+          result[i]["count"]
+        )
+      end
     end
   end
 end
