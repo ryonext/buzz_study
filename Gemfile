@@ -30,3 +30,7 @@ gem 'padrino-sprockets', require: "padrino/sprockets"
 # %w(core gen helpers cache mailer admin).each do |g|
 #   gem 'padrino-' + g, '0.11.4'
 # end
+group :development, :test do
+  gem 'tapp'
+  gem 'byebug'
+end
