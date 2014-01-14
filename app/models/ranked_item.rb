@@ -10,6 +10,7 @@ class RankedItem
   end
 
   def get_page_name(uri)
+    return "" if uri.nil?
     response = try_redirection_uri(uri)
     doc = Nokogiri(response.body)
     doc.title
