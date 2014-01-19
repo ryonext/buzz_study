@@ -6,7 +6,7 @@ class RankedItem
   def initialize(uri, count)
     @uri = uri
     @count = count
-    @page_name = get_page_name(@uri)
+    @page_name = ""#get_page_name(@uri)
   end
 
   def get_page_name(uri)
