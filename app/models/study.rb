@@ -1,7 +1,7 @@
 class Study
   include Mongoid::Document
   include Mongoid::Timestamps # adds created_at and updated_at fields
-  store_in collection: "uri_map"
+  store_in collection: "study_rank"
 
   # field <name>, :type => <type>, :default => <value>
   field :uri, :type => String
