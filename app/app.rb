@@ -61,5 +61,8 @@ module BuzzStudy
     #     render 'errors/505'
     #   end
     #
+    get "/" do
+      redirect_to "/study"
+    end
   end
 end
