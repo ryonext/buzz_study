@@ -4,9 +4,8 @@ class Study
   store_in collection: "study_rank2"
 
   # field <name>, :type => <type>, :default => <value>
-  field :uri, :type => String
-  field :title, :type => String
-  field :count, :type => String
+  field :_id, :type => Hash
+  field :value,:type => Hash
 
   # You can define indexes on documents using the index macro:
   # index :field <, :unique => true>

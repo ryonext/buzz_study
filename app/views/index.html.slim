@@ -11,8 +11,8 @@ table.table
   - @studies.each_with_index do |s, i|
     tr
       td = i + 1
-      td = link_to "#{s.title}(#{s.uri})", s.uri
-      td = s.count
+      td = link_to "#{s.value["title"]}(#{s._id["uri"]})", s._id["uri"]
+      td = Integer(s.value["count"])
 
 br
 
