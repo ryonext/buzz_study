@@ -1,17 +1,19 @@
 = stylesheet_link_tag "/assets/application"
 
-h1 Listing studies
+h1 最近話題の勉強会一覧
 
 table.table
   tr
     th no.
+    th title
     th uri
     th count
 
   - @studies.each_with_index do |s, i|
     tr
       td = i + 1
-      td = link_to "#{s.value["title"]}(#{s._id["uri"]})", s._id["uri"]
+      td = link_to "#{s.value["title"]}", s._id["uri"]
+      td = link_to "#{s._id["uri"]}",     s._id["uri"]
       td = Integer(s.value["count"])
 
 br
