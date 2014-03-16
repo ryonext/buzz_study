@@ -1,0 +1,11 @@
+production:
+  sessions:
+    default:
+      uri: <%= ENV['DATABASE_URL'] %>
+
+development:
+  sessions:
+    default:
+      database: buzz_study_develop
+      hosts:
+        - localhost:27017
