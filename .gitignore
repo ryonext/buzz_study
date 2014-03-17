@@ -8,5 +8,5 @@ vendor/gems/*
 db/*.db
 .*.sw*
 .bundle/
-config/mongoid.yml
+#config/mongoid.yml
 

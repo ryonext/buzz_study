@@ -1,0 +1,11 @@
+production:
+  sessions:
+    default:
+      uri: <%= ENV['DATABASE_URL'] %>
+
+development:
+  sessions:
+    default:
+      database: heroku_app21356343
+      hosts:
+        - localhost:27017
